@@ -1,0 +1,157 @@
+{
+  "target": "GDPC1 (Real GDP, quarterly), log-diff in %",
+  "n_predictors": 24,
+  "predictor_codes": [
+    "INDPRO",
+    "PAYEMS",
+    "UNRATE",
+    "CMRMTSPL",
+    "ICSA",
+    "CPIAUCSL",
+    "CPILFESL",
+    "PPIACO",
+    "PCEPILFE",
+    "FEDFUNDS",
+    "GS1",
+    "GS10",
+    "TB3MS",
+    "BAA",
+    "AAA",
+    "M1SL",
+    "M2SL",
+    "TOTRESNS",
+    "HOUST",
+    "PERMIT",
+    "UMCSENT",
+    "TCU",
+    "DCOILWTICO",
+    "AWHMAN"
+  ],
+  "sample_start": "1986-04-01",
+  "sample_end": "2026-01-01",
+  "train_end": "2014-10-01",
+  "n_oos": 45,
+  "k_factors": 3,
+  "first_three_var_explained": [
+    0.37615561207380754,
+    0.15318624348345442,
+    0.09758275624724363
+  ],
+  "cum_var_first_3": 0.6269246118045056,
+  "lasso_origin_count": 45,
+  "lasso_top_selected": {
+    "INDPRO": 51.1,
+    "PAYEMS": 51.1,
+    "PERMIT": 51.1,
+    "TOTRESNS": 51.1,
+    "CMRMTSPL": 51.1,
+    "UMCSENT": 48.9,
+    "BAA": 33.3,
+    "ICSA": 11.1
+  },
+  "results_table": [
+    {
+      "Horizon": 1,
+      "Model": "NaiveMean",
+      "MSFE": 3.046064546434864,
+      "MAE": 0.6856721467163142,
+      "RelMSFE_vs_RW": 0.3922438843390651,
+      "n_obs": 45
+    },
+    {
+      "Horizon": 1,
+      "Model": "RW",
+      "MSFE": 7.76574133607593,
+      "MAE": 1.0601424905315286,
+      "RelMSFE_vs_RW": 1.0,
+      "n_obs": 45
+    },
+    {
+      "Horizon": 1,
+      "Model": "RWD",
+      "MSFE": 7.8227746412951875,
+      "MAE": 1.063611175417524,
+      "RelMSFE_vs_RW": 1.0073442190192852,
+      "n_obs": 45
+    },
+    {
+      "Horizon": 1,
+      "Model": "DiffusionIndex",
+      "MSFE": 5.616270005297879,
+      "MAE": 0.8509462840932732,
+      "RelMSFE_vs_RW": 0.7232110576755071,
+      "n_obs": 45
+    },
+    {
+      "Horizon": 1,
+      "Model": "Ridge",
+      "MSFE": 7.8804197585250915,
+      "MAE": 0.9496367941059078,
+      "RelMSFE_vs_RW": 1.014767221503557,
+      "n_obs": 45
+    },
+    {
+      "Horizon": 1,
+      "Model": "Lasso",
+      "MSFE": 9.72844513148366,
+      "MAE": 0.937166280009415,
+      "RelMSFE_vs_RW": 1.2527387548037359,
+      "n_obs": 45
+    },
+    {
+      "Horizon": 4,
+      "Model": "NaiveMean",
+      "MSFE": 3.0274602627667675,
+      "MAE": 0.6843964949758378,
+      "RelMSFE_vs_RW": 0.4706921626599989,
+      "n_obs": 45
+    },
+    {
+      "Horizon": 4,
+      "Model": "RW",
+      "MSFE": 6.431932594028831,
+      "MAE": 1.2313178046632818,
+      "RelMSFE_vs_RW": 1.0,
+      "n_obs": 45
+    },
+    {
+      "Horizon": 4,
+      "Model": "RWD",
+      "MSFE": 6.624592165531144,
+      "MAE": 1.2488042562535964,
+      "RelMSFE_vs_RW": 1.0299536054966079,
+      "n_obs": 45
+    },
+    {
+      "Horizon": 4,
+      "Model": "DiffusionIndex",
+      "MSFE": 3.154297326893497,
+      "MAE": 0.7830682399236774,
+      "RelMSFE_vs_RW": 0.4904120621260599,
+      "n_obs": 45
+    },
+    {
+      "Horizon": 4,
+      "Model": "Ridge",
+      "MSFE": 3.0302291895907993,
+      "MAE": 0.6863310223160897,
+      "RelMSFE_vs_RW": 0.4711226595259957,
+      "n_obs": 45
+    },
+    {
+      "Horizon": 4,
+      "Model": "Lasso",
+      "MSFE": 3.054211680256558,
+      "MAE": 0.6985514124048792,
+      "RelMSFE_vs_RW": 0.47485131966276756,
+      "n_obs": 45
+    }
+  ],
+  "y_descstats": {
+    "mean": 0.6352159696984283,
+    "std": 1.0574734411806361,
+    "min": -8.204320604026982,
+    "max": 7.4757496362447995,
+    "n": 160
+  }
+}
